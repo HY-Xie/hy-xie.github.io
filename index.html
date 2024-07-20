@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Haoyang Xie Ph.D IT</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <article class="container">
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关, 记得及时删除这段代码 Start-->
+            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 750px) {
+                    .switch {
+                        position: relative;
+                        display: inline-block !important;
+                        width: 60px;
+                        height: 34px;
+                    }
+
+                    .switch input {
+                        display: none;
+                    }
+
+                    .slider {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ccc;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                    }
+
+                    .slider:before {
+                        position: absolute;
+                        content: "";
+                        height: 26px;
+                        width: 26px;
+                        left: 4px;
+                        bottom: 4px;
+                        background-color: white;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                    }
+
+                    input:checked+.slider {
+                        background-color: #1abc9c;
+                    }
+
+                    input:focus+.slider {
+                        box-shadow: 0 0 1px #1abc9c;
+                    }
+
+                    input:checked+.slider:before {
+                        -webkit-transform: translateX(26px);
+                        -ms-transform: translateX(26px);
+                        transform: translateX(26px);
+                    }
+
+                    .slider.round {
+                        border-radius: 34px;
+                    }
+
+                    .slider.round:before {
+                        border-radius: 50%;
+                    }
+                }
+            </style>
+            <!-- 左侧固定开关, 记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section class="me">
+                <section class="portrait">
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="./assets/images/avatar.jpg" onload="loading()">
+                </section>
+
+                <h1 class="name">Haoyang Xie</h1>
+                <h4 class="info-job">Ph.D</h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>Information
+                </h2>
+                <hr />
+                <ul>
+                    <li>
+                        <label>Name</label>
+                        <span>Haoyang Xie / M </span>
+                    </li>
+                    <li>
+                        <label>Gitee</label>
+                        <span>CET-6</span>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>Contact
+                </h2>
+                <hr />
+                <ul>
+                    <li>
+                        <label>Mobile</label>
+                        <a href="#" target="_blank">+86-1553838-626</a>
+                    </li>
+                    <li>
+                        <label>Email</label>
+                        <a href="mailto:xiehaoyang@ncwu.edu.cn" target="_blank">xiehaoyang@ncwu.edu.cn</a>
+                    </li>
+                    <li>
+                        <label>Personal</label>
+                        <a href="http://0b11111110.com/" target="_blank">0b11111110.com/</a>
+                    </li>
+                    <li>
+                        <label>Github</label>
+                        <a href="https://github.com/0b11111110" target="_blank">github.com/0b11111110</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>Skills
+                </h2>
+                <hr />
+                <ul>
+                    <li>
+                        <label>Python</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>C/C++</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+
+                    <li>
+                        <label>JavaScript</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>HTML</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>CSS</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+
+
+            <!-- 技术栈 -->
+            <div class="stack info-unit">
+                <h2><i class="fa fa-code" aria-hidden="true"></i>Tech. Stack</h2>
+                <hr />
+                <ul>
+                    <li>
+                        <label><Strong>Deep Learning</Strong></label>
+                        <span>PyTorch | TensorFlow | PaddlePaddle | TensorRT | OnnxRunTime | OpenVINO | OpenCV
+                            ...</span>
+                    </li>
+                    <br>
+                    <li>
+                        <label><Strong>Geometric Processing</Strong></label>
+                        <span>CGAL | OpenMesh | Eigen | Ceres | OpenGL | OpenCV | Qt ...</span>
+                    </li>
+                    <br>
+
+                    <li>
+                        <label><strong>Web (Back)</strong></label>
+                        <span>Django | FastAPI | Flask | Redis | MongoDB | Celery | ElasticSearch | PostgreSQL | MySQL
+                            ... </span>
+                    </li>
+                    <li>
+                        <label><strong>Web (Front)</strong></label>
+                        <span>JavaScript | TypeScript | Vue | Element Plus | BootStrap ...</span>
+                    </li>
+                    <li>
+                        <label><strong>Others</strong></label>
+                        <span>Git、SVN、Markdown ...</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- QR Code -->
+            <!-- <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+                <hr />
+                <img src="https://github.com/-Collection/blob/master/ifeees.jpg?raw=true"
+                    style="width: 100%;" alt="">
+            </section> -->
+        </section>
+
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>Education
+                </h2>
+                <hr />
+                <ul>
+                    <!-- 博士 -->
+                    <li>
+                        <h3>
+                            <span><strong>Ph.D</strong> - Donghua University, Shanghai, China</span>
+                            <time>Sep.,2015 - Sep.,2020</time>
+                        </h3>
+                        <p>
+                            <i>Research
+                                interests</i>: 3D Computer vision; Deep learning; Integrated 3D applications
+                            (reconstruction, recognition, retrieval, measurement, expression); Digital geometry
+                            processing;
+                        </p>
+                        <p>
+                            <i>Thesis</i>: High-precision 3D human reconstruction and its application in virtual fitting
+                        </p>
+                        <!-- <p>专业排名
+                            <mark>X/XX</mark>, 期间发表国际会议英文摘要X篇, 国内核心期刊文章X篇 (其中第一作者X篇), 获XXX, XXX2次, XXX2次。(此处根据自身情况填写, 可以突出自己的亮点, 或者跟求职目标相关的内容)
+                        </p> -->
+                    </li>
+                    <!-- 访问学者 -->
+                    <li>
+                        <h3>
+                            <span><strong>Visiting Scholar</strong> - University of California, Davis, CA, USA</span>
+                            <time>Nov.,2017 - Nov.,2018</time>
+                        </h3>
+                        <p>
+                            Supported by China Scholarship Council (CSC)
+                        </p>
+
+                        <!-- <p>专业排名
+                            <mark>X/XX</mark>, 期间发表国际会议英文摘要X篇, 国内核心期刊文章X篇 (其中第一作者X篇), 获XXX, XXX2次, XXX2次。(此处根据自身情况填写, 可以突出自己的亮点, 或者跟求职目标相关的内容)
+                        </p> -->
+                    </li>
+                    <!-- 硕士 -->
+                    <li>
+                        <h3>
+                            <span><strong>M.S.</strong> - Fort Hays State University, KS, USA</span>
+                            <time>Sep.,2009 - Sep.,2011</time>
+                        </h3>
+
+                        <p>
+                            <i>Research
+                                interests</i>: Information assurance; Network security; Computer forensics
+                        </p>
+                    </li>
+                    <!-- B.S. -->
+                    <li>
+                        <h3>
+                            <span><strong>B.S.</strong> - Zhengzhou University, Zhengzhou, China</span>
+                            <time>Sep.,2005.9 - Sep.,2009</time>
+                        </h3>
+                        <p>
+                            <i>Major</i>: Information Management and System
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <h3>
+                            <span>XXXX大学 - XXX专业 (本科)</span>
+                            <time>201X.9-201X.7</time>
+                        </h3>
+                        <p>专业排名
+                            <mark>X/XX</mark>, 期间发表国内核心期刊文章X篇, 三等奖学金X次。
+                        </p>
+                    </li> -->
+                </ul>
+            </section>
+
+            <!-- 工作经历 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>EXPERIENCE
+                </h2>
+                <hr />
+                <ul>
+                    <!-- 华水 -->
+                    <li>
+                        <h3>
+                            <span><strong>North China University of Water Resources and Electric Power</strong></span>
+                            <time>May,2021 - Now</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <p>College of Information Engineering - <span>Lecture | Master's supervisor</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 欣峰 -->
+                    <li>
+                        <h3>
+                            <span><strong>Henan Xinfeng Information Technology Co., Ltd</strong></span>
+                            <time>Jun.,2021 - Aug.,2023</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <p>Vice general manager</p>
+                            </li>
+                            <li>
+                                <p>In charge of managing the development process of all IT projects across the
+                                    company.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 电气学院 -->
+                    <li>
+                        <h3>
+                            <span><strong>Xuchang Electric Vocational College</strong></span>
+                            <time>Oct.,2012 - Aug.,2015</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <p>Responsible for the design of school digital solutions, including network system
+                                    architecture, OA design, etc</p>
+                            </li>
+                            <li>
+                                <p>Responsible for school network construction, management and maintenance</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- <li>
+                        <h3>
+                            <span>[经历2]XX－前端开发工程师 (实习)</span>
+                            <time>20XX.10-20XX.7</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与公司主线产品「XXXX」的前端开发工作, 完成帖子快捷回复、
+                                <mark>全站图片懒加载</mark>、活动banner、帖子管理 (使用Yii框架)等功能。项目采用技术栈phpWind+NAMP。
+                                <a href="http://itsay.tech/162/" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。
+                            </li>
+                            <li>主要参与公司产品「XXXX」的前端开发工作, 实现接入微博、微信、QQ等
+                                <mark>第三方账号登录</mark>等功能。项目采用技术栈WordPress+NAMP。
+                            </li>
+                            <li>活动页面的开发 (七夕活动、抽奖活动以及承接外包页面)。</li>
+                            <li>论坛
+                                <mark>图片增量备份</mark> (CentOS+vsftpd+crontab)
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。
+                            </li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </section>
+
+            <!-- 发表 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>PUBLICATIONS (Recent 5 Years)
+                </h2>
+                <hr />
+                <ul>
+                    <li>
+                        <p> <strong>H. Xie</strong> and Y. Zhong, “Consistent 3D human body segmentation based on
+                            combinatorial
+                            descriptor in spectral domain,” Multimedia Tools and Applications, vol. 82, no. 18, pp.
+                            27927–27947, Jul. <strong>2023</strong>, doi: 10.1007/s11042-023-14729-y.
+                            (SCI)</p>
+                    </li>
+                    <li>
+                        <p> K. Han, N. Zhang, <strong>H. Xie</strong>, Q. Wang, and W. Ding, “An improved strategy of
+                            wheat kernel
+                            recognition based on deep learning,” DYNAII, vol. 98, no. 1, pp. 91–97, Jan.
+                            <strong>2023</strong>, doi:
+                            10.6036/10686.
+                            (SCI)
+                        </p>
+                    </li>
+                    <li>
+                        <p> <strong>H. Xie</strong>, Y. Zhong, Z. Yu, A. Hussain, and G. Chen, “Automatic 3D human body
+                            landmarks
+                            extraction and measurement based on mean curvature skeleton for tailoring,” The Journal of
+                            The Textile Institute, vol. 113, no. 8, pp. 1677–1687, Jul. <strong>2022</strong>, doi:
+                            10.1080/00405000.2021.1944513.
+
+                            (SCI)
+                        </p>
+                    </li>
+                    <li>
+                        <p> K. Han, N. Zhang, <strong>H. Xie</strong>, Q. Wang, and L. Sun, “Application of
+                            Multi-Feature Fusion
+                            Based on Deep Learning in Pedestrian Re-Recognition Method,” Mob. Inf. Syst., vol.
+                            <strong>2022</strong>,
+                            doi: 10.1155/2022/5292134.
+                            (SCI)
+                        </p>
+                    </li>
+                    <li>
+                        <p> <strong>H. Xie</strong>, Y. Zhong, Z. Yu, A. Hussain, and G. Chen, “Automatic 3D human body
+                            landmarks
+                            extraction and measurement based on mean curvature skeleton for tailoring,” The Journal of
+                            The Textile Institute, vol. 113, no. 8, pp. 1677–1687, Jul. <strong>2022</strong>, doi:
+                            10.1080/00405000.2021.1944513.
+
+                            (SCI)
+                        </p>
+                    </li>
+                    <li>
+                        <p> <strong>H. Xie</strong>, Y. Zhong, “Non-parametric 3D human
+                            body reconstruction based on graph convolutional networks”,Wool Textile Journal, vol. 49,
+                            no. 04, pp. 18–24, <strong>2021</strong>
+                            (CN)
+                        </p>
+                    </li>
+                    <li>
+                        <p> <strong>H. Xie</strong>, Y. Zhong, Z. Yu, and A. Hussain, “Non-Parametric Anthropometric
+                            Graph Convolutional Network for Virtual Mannequin Reconstruction,” IEEE Access, vol. 8, pp.
+                            3539–3550, <strong>2020</strong>, doi: 10.1109/ACCESS.2019.2962833.
+                            (SCI)
+                        </p>
+                    </li>
+                    <li>
+                        <p> <strong>H. Xie</strong> and Y. Zhong, “Structure-consistent customized virtual mannequin
+                            reconstruction
+                            from 3D scans based on optimization,” Textile Research Journal, vol. 90, no. 7–8, pp.
+                            937–950, <strong>2020</strong>.
+
+                            (SCI)
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 科研项目 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-users" aria-hidden="true"></i>RESEARCH
+                </h2>
+                <hr />
+                <ul>
+                    <li>
+                        <p> High-precision 3D human and garment reconstruction for the apparel industry and its
+                            application in virtual fitting, The key scientific and technological research projects of
+                            Henan Province (222102210124).</p>
+                    </li>
+                    <li>
+                        <p> Adaptive fitting robot algorithm design, Special funds for basic scientific research of
+                            central universities (CUSF-DH-D-2017006).
+                        </p>
+                    </li>
+                    <li>
+                        <p> Reconstruction method of high-precision virtual clothing draping space based on minimal
+                            input, National Natural Science Foundation of China (61572124).
+                        </p>
+                    </li>
+                    <li>
+                        <p> A geometry and dynamic model for virtual clothing based on stable transitions, Shanghai
+                            Natural Science Foundation (4ZR1401100).
+                        </p>
+                    </li>
+                    <li>
+                        <p> Development of 3D human body / clothing scanner, Elite Leading Plan of Yinzhou District,
+                            Ningbo.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- 项目 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-bars" aria-hidden="true"></i>PROJECTS
+                </h2>
+                <hr />
+                <ul>
+                    <!-- 消防 -->
+                    <li>
+                        <h3>
+                            <span>Fire-Fighting AI Maintenance Platform</span>
+                            <span class="link">
+                                <a href="http://47.121.126.9:28012/#/second-home" target="_blank">Demo</a>
+                            </span>
+                            <time>2024</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Tech stack: Django | PostgreSQL | Vue3+Element Plus | Three.JS | TensorRT | Redis ...
+                            </li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Target] This platform is developed for fire-fighting maintenance companies. Its purpose
+                                is
+                                to enable fire-fighting maintenance companies to accurately grasp the status and
+                                information
+                                of various fire-fighting equipments of their clients in real time.
+                                <br />
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [Intro.] This platform integrates multiple IoT technologies and can track the real-time
+                                status of various common devices in the fire-fighting field, such as fire control hosts,
+                                temperature detectors, and smoke detectors, and so on. Meanwhile, we independently
+                                developed
+                                multiple AI algorithms for fire-fighting scenarios, such as fire detection algorithms,
+                                smoke detection algorithms, smoking detection algorithms, and fire passage occupancy
+                                detection algorithms. It not only achieves multi-dimensional detection and analysis but
+                                also reduces the false alarm rate of various traditional devices.
+                                <br />
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [Working] We are still working on this project.
+                                <br />
+
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 水环境 -->
+                    <li>
+                        <h3>
+                            <span>Intelligent Monitoring and Supervision Platform for Water Environment</span>
+                            <span class="link">
+                                <a href="#">Demo</a>
+                            </span>
+                            <time>2023</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Tech stack: Django | PostgreSQL | Vue3 | Element Plus | Cesium | PyTorch | TensorRT ...
+                            </li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Target] The Water Environment Smart Regulation Platform is an advanced platform based
+                                on the integration of water environment governance, IoT, big data, as well as AI. It
+                                aims to achieve intelligent regulation of the water environment through a wide-ranging
+                                and high-density monitoring network, as well as big data and artificial intelligence
+                                technologies.
+                                <br />
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [Intro.] The platform can monitor human activities and provide timely warnings of water
+                                environment issues to achieve precise governance of the water environment. In addition,
+                                the platform can also conduct real-time monitoring and big data analysis of water
+                                quality, water ecology, and other environmental data, providing scientific basis for
+                                environmental governance decisions.
+                                <br />
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [Future] We are now redesigning this platform using UE5 with blueprint / C++.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 水利工程建设管理平台 -->
+                    <li>
+                        <h3>
+                            <span>Construction and Management Platform for Water Conservancy Engineering Projects</span>
+                            <span class="link">
+                                <a href="#">Demo</a>
+                            </span>
+                            <time>2022</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Tech stack: Django | PostgreSQL | Vue3 | Element Plus | Cesium | PyTorch | OnnxRuntime
+                                ...</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Target] This platform is designed to control the entire process of the water
+                                conservancy construction period in order to improve the efficiency of project
+                                construction and control the construction cost.
+                                <br />
+
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [Intro.] This platform closely combines BIM, GIS and artificial intelligence
+                                technologies, develops targeted algorithms for water conservancy construction scenarios,
+                                and realizes efficient management of the water conservancy engineering construction
+                                process.
+                                <br />
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>3D Face Recognition and Retrieval (Core Algorithm)</span>
+                            <span class="link">
+                                <a href="#">Demo</a>
+                            </span>
+                            <time>2020</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>Tech stack: TensorFlow | OpenVINO | C++ | Python </li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [Target] This algorithm aims to realize face recognition and retrieval in multi-target
+                                scenarios, which can detect both front and side faces simultaneously.
+                                <br />
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [Intro.] Based on our privious 2D face retrieval, we adopted depth camera and utilized
+                                facial feature maps to achieve face differentiation, which
+                                can effectively prevent the use of fake photos to
+                                bypass the face detection system.
+                                <br />
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [Hardware] ORBBEC Astra
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </section>
+
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>Expectation
+                </h2>
+                <hr />
+                <p> Transform research into value.
+                </p>
+            </section>
+        </section>
+    </article>
+
+
+
+    <footer class="footer">
+        <p>© 2024 Haoyang Xie. Latest updated:
+            <time>Jun., 2024</time>.
+        </p>
+    </footer>
+
+    <!-- 侧栏 -->
+    <!-- <aside>
+        <ul>
+            <li>
+                <a href="https://gitee.com/" target="_blank">源代码</a>
+            </li>
+            <li>
+                <a href="http://hy-xie.com/" target="_blank">Blog</a>
+            </li>
+        </ul>
+    </aside> -->
+
+    <script src="./assets/js/index.js"></script>
+    <script>
+        function loading() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
